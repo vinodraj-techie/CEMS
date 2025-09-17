@@ -1,0 +1,55 @@
+/* Admin Dashboard Styles */
+.dashboard-container {
+    display: flex;
+  }
+  
+  main {
+    padding: 20px;
+    width: 100%;
+    background-color: #f9f9f9;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .stats-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .stats-container div {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
+  }
+  
+  .stats-container h3 {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .stats-container p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f39c12;
+  }
+  
+  @media (max-width: 768px) {
+    .stats-container {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .stats-container div {
+      width: 100%;
+    }
+  }
+  

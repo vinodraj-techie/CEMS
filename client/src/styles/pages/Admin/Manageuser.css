@@ -1,0 +1,75 @@
+/* Manage Users Styles */
+.manage-users-container {
+    padding: 20px;
+    background-color: #f7f7f7;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+  }
+  
+  table th,
+  table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #f39c12;
+    color: white;
+  }
+  
+  table td {
+    background-color: white;
+  }
+  
+  button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #c0392b;
+  }
+  
+  .error,
+  .success {
+    margin: 20px 0;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  .success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  @media (max-width: 768px) {
+    table {
+      font-size: 0.9rem;
+    }
+  
+    button {
+      padding: 6px 12px;
+    }
+  }
+  

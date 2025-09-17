@@ -1,0 +1,45 @@
+# Node.js dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.* # If you use environment-specific files like .env.production
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime files
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Build and deployment
+dist/
+build/
+
+# Debugging files
+*.swp
+*.swo
+
+# Coverage directories
+coverage/
+.nyc_output/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor-specific files
+.idea/
+.vscode/
+*.iml
+
+# Ignore lockfiles if you don't want to commit them
+# Uncomment below if you only use npm or yarn, not both
+# package-lock.json
+# yarn.lock

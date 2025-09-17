@@ -1,0 +1,55 @@
+class ThreeWayHandshakeFSM:
+    def _init_(self):
+        self.state = "CLOSED"  # Initial state
+
+    def transition(self, event):
+        """Handles transitions between states based on events."""
+        if self.state == "CLOSED":
+            if event == "SYN":
+                self.state = "SYN_SENT"
+                print("Transition: CLOSED -> SYN_SENT (Event: SYN)")
+            else:
+                self.invalid_transition(event)
+        
+        elif self.state == "SYN_SENT":
+            if event == "SYN-ACK":
+                self.state = "SYN_RECEIVED"
+                print("Transition: SYN_SENT -> SYN_RECEIVED (Event: SYN-ACK)")
+            else:
+                self.invalid_transition(event)
+        
+        elif self.state == "SYN_RECEIVED":
+            if event == "ACK":
+                self.state = "ESTABLISHED"
+                print("Transition: SYN_RECEIVED -> ESTABLISHED (Event: ACK)")
+            else:
+                self.invalid_transition(event)
+        
+        else:
+            print(f"Invalid state: {self.state}")
+
+    def invalid_transition(self, event):
+        """Handles invalid transitions."""
+        print(f"Invalid transition: State ({self.state}), Event ({event})")
+
+    def show_state(self):
+        """Displays the current state."""
+        print(f"Current State: {self.state}")
+
+# Demonstration of the Three-Way Handshake
+if __name__ == "_main_":
+    fsm = ThreeWayHandshakeFSM()
+    fsm.show_state()
+
+    # Simulate the handshake process
+    fsm.transition("SYN")         # Client sends SYN
+    fsm.show_state()
+
+    fsm.transition("SYN-ACK")     # Server responds with SYN-ACK
+    fsm.show_state()
+
+    fsm.transition("ACK")         # Client sends ACK
+    fsm.show_state()
+
+    # Invalid transition example
+    fsm.transition("SYN")         # Trying SYN after connection established

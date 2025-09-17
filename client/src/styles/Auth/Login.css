@@ -1,0 +1,120 @@
+/* Authentication Container */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #eef2f3, #ffffff);
+  padding: 20px;
+}
+
+/* Form Wrapper */
+.auth-container div {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Form Title */
+.auth-container h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Input Fields and Select */
+.auth-container input,
+.auth-container select {
+  width: 100%;
+  padding: 14px 12px;
+  margin: 12px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fafafa;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-family: 'Arial', sans-serif;
+}
+
+.auth-container input:focus,
+.auth-container select:focus {
+  border-color: #1e90ff;
+  box-shadow: 0 0 8px rgba(30, 144, 255, 0.4);
+  outline: none;
+}
+
+/* Submit Button */
+.auth-container button {
+  background-color: #1e90ff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 14px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.auth-container button:hover {
+  background-color: #0073e6;
+  transform: scale(1.02);
+}
+
+.auth-container button:active {
+  background-color: #005bb5;
+}
+
+/* Error Message */
+.error {
+  color: #d9534f;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Loading State */
+.auth-container button[disabled] {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .auth-container div {
+    padding: 30px 20px;
+  }
+
+  .auth-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .auth-container input,
+  .auth-container select,
+  .auth-container button {
+    font-size: 0.95rem;
+  }
+}
+/* Title Styling */
+.auth-title {
+  margin-bottom: 20px; /* Adds spacing below the title */
+  font-size: 2.2rem;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center; /* Centers the title */
+}
+
+/* Adjust Form Container */
+.auth-container div {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
